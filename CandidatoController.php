@@ -9,7 +9,7 @@ class CandidatoController extends Controller{
     
     function createcandidato()
 {
-    $dados = DB::table('candidatos', 'periodos')->get();
+    $dados = DB::table('periodos')->get();
 
     return view('urna.candidato.create', ['dados' => $dados]);
 }
@@ -25,7 +25,7 @@ function storecandidato(Request $request)
 function editcandidato($id)
 {
     $candidato = DB::table('candidatos')->find($id);
-    return view('urna.candudato.edit', ['candidato' => $candidato]);
+    return view('urna.candidato.edit', ['candidato' => $candidato]);
 }
 
 function updatecandidato(Request $request)

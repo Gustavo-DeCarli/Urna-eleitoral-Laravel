@@ -25,7 +25,7 @@ Route::get('/urna', [PeriodoController::class, 'index']);
 Route::get('/urna/{id}/periodoshow', [PeriodoController::class, 'showperiodo'])->where('id','[0-9]+');
 Route::get('/urna/periodocreate', [PeriodoController::class, 'createperiodo']);
 Route::post('/urna/periodostore', [PeriodoController::class, 'periodostore']);
-Route::get('/urna/{id}/periodosedit', [PeriodoController::class, 'editperiodo']);
+Route::get('/urna/{id}/periodoedit', [PeriodoController::class, 'editperiodo']);
 Route::post('/urna/periodoupdate', [PeriodoController::class, 'updateperiodo']);
 Route::get('/urna/{id}/periododestroy', [PeriodoController::class, 'destroyperiodo']);
 

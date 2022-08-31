@@ -1,10 +1,11 @@
 @extends('base.index')
 
 @section('container')
-<a class="btn btn-success mt-2 mb-2" href="/urna/periodocreate">Novo curso</a>
+<a class="btn btn-success mt-2 mb-2" href="/urna/periodocreate">Novo Periodo</a>
 <table class="table table-dark">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Nome</th>
             <th>Data de Inicio</th>
             <th>Data de Término</th>
@@ -14,20 +15,21 @@
     <tbody>
         @foreach($periodos as $periodo)
             <tr>
+                <td>{{$periodo->id}}</td>
                 <td>{{$periodo->nome}}</td>
                 <td>{{$periodo->data_inicio}}</td>
                 <td>{{$periodo->data_fim}}</td>
                 <td>
-                    <a class="btn btn-warning" href="/urna/{{$periodo->id}}/cursoedit">Editar</a>
-                    <a class="btn btn-info" href="/urna/{{$periodo->id}}/cursoshow">Ver</a>
-                    <a class="btn btn-danger" href="/urna/{{$periodo->id}}/cursodestroy">Remover</a>
+                    <a class="btn btn-warning" href="/urna/{{$periodo->id}}/periodoedit">Editar</a>
+                    <a class="btn btn-info" href="/urna/{{$periodo->id}}/periodoshow">Ver</a>
+                    <a class="btn btn-danger" href="/urna/{{$periodo->id}}/periododestroy">Remover</a>
                 </td>
             </tr>
         @endforeach
     </tbody>
 </table>
 
-<a class="btn btn-success mb-2" href="/urna/eleitorcreate">Novo formulário</a>
+<a class="btn btn-success mb-2" href="/urna/eleitorcreate">Novo eleitor</a>
 <table class="table table-dark">
     <thead>
         <tr>
@@ -55,7 +57,7 @@
     </tbody>
 </table>
 
-<a class="btn btn-success mb-2" href="/urna/candidatocreate">Nova Turma</a>
+<a class="btn btn-success mb-2" href="/urna/candidatocreate">Nova Candidato</a>
 <table class="table table-dark">
     <thead>
         <tr>
@@ -88,22 +90,15 @@
 
     </tbody>
 </table>
-<a class="btn btn-success mb-2" href="/escolas/formaluno">Novo Registro</a>
+<a class="btn btn-success mb-2" href="/escolas/formaluno">Novo Voto</a>
 
 <table class="table table-dark">
     <thead>
         <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Estado</th>
-            <th>Cidade</th>
-            <th>Transporte</th>
-            <th>Poder Publ.</th>
-            <th>Turma</th>
-            <th>Diferença:</th>
-            <th>Data de início</th>
-            <th>Data de término</th>
-            
+            <th>aaa</th>
+            <th>aaaa</th>
+            <th>aaaa</th>
+            <th>aaaa</th>
         </tr>
     </thead>
     <tbody>

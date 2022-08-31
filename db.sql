@@ -1,4 +1,6 @@
-create DATABASE urna:
+create DATABASE urna;
+
+use urna;
 
 create table periodos(
     id int not null AUTO_INCREMENT PRIMARY KEY,
@@ -8,7 +10,7 @@ create table periodos(
 );
 
 create table eleitores(
-    id int not null AUTO_INCREMENT PRIMARY KEY
+    id int not null AUTO_INCREMENT PRIMARY KEY,
     nome varchar(120) not null ,
     titulo int not null,
     zona varchar(120) not null,
@@ -26,7 +28,7 @@ create table candidatos(
 
 create table votos(
     id int not null AUTO_INCREMENT PRIMARY KEY,
-    data_inicio datetime not null,
+    datavt datetime not null,
     candidato int,
     zona varchar(120) not null,
     seção varchar(120)  not null

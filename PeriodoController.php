@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class PeriodoController extends Controller{
 
-        function index(){
+    function index(){
         $periodos = DB::table('periodos')->get();
         $eleitores = DB::table('eleitores')->get();
         $candidatos = DB::table('candidatos')->get();
@@ -20,7 +20,6 @@ class PeriodoController extends Controller{
             'votantes' => $votantes
         ]);
     }
-
     function createperiodo(){
         return view('urna.periodos.create');
     }
