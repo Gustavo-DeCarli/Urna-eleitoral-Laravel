@@ -3,12 +3,12 @@
 @section('container')
  
  
-<form action='' method='post'>
+<form action='/urna/store' method='post'>
     <input type='hidden' name='_token' value='{{ csrf_token() }}' />
  
     <div class="mb-2">
-            <label for="titulo_eleitor" class="form-label">Número titulo</label>
-            <input type="number" name="titulo_eleitor" class="form-control" id="titulo_eleitor">
+            <label for="titulo" class="form-label">Número titulo</label>
+            <input type="number" name="titulo" class="form-control" id="titulo_eleitor">
         </div>
  
     <div class="mb-2">

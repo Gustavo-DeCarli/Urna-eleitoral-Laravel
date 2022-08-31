@@ -90,7 +90,7 @@
 
     </tbody>
 </table>
-<a class="btn btn-success mb-2" href="/escolas/formaluno">Novo Voto</a>
+<a class="btn btn-success mb-2" href="/urna/voto">Novo Voto</a>
 
 <table class="table table-dark">
     <thead>

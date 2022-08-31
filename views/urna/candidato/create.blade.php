@@ -17,7 +17,14 @@
     </div>
     <div class="mb-2">
         <label for="cargo" class="form-label">Cargo</label>
-        <input type="text" name="cargo" class="form-control" id="cargo">
+        <select type="text" name="cargo" class="form-control" id="cargo">
+            <option value=''>Selecione uma opção</option>
+            <option value='Presidente'>Presidente</option>
+            <option value='Governador'>Governador</option>
+            <option value='Senador'>Senador</option>
+            <option value='Deputado Federal'>Deputado Federal</option>
+            <option value='Deputado Estadual'>Deputado Estadual</option>
+        </select>
     </div>
     <div class="mb-2">
         <label for="periodo" class="form-label">Periodo</label>

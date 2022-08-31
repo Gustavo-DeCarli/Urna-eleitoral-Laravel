@@ -12,7 +12,7 @@ create table periodos(
 create table eleitores(
     id int not null AUTO_INCREMENT PRIMARY KEY,
     nome varchar(120) not null ,
-    titulo int not null,
+    titulo bigint not null,
     zona varchar(120) not null,
     secao varchar(120) not null
 );
@@ -29,13 +29,17 @@ create table candidatos(
 create table votos(
     id int not null AUTO_INCREMENT PRIMARY KEY,
     datavt datetime not null,
-    candidato int,
+    candidato_id int,
     zona varchar(120) not null,
-    secao varchar(120)  not null
+    secao varchar(120)  not null,
+    foreign KEY (candidato_id) references candidatos (id)
 );
 
 create table votantes (
     id int not null AUTO_INCREMENT PRIMARY KEY,
-    eleitor int not null,
-    periodo int not null
+    eleitor_id int not null,
+    periodo_id int not null,
+    foreign KEY (eleitor_id) references eleitores (id),
+    foreign KEY (periodo_id) references periodos (id)
+
 );

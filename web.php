@@ -45,7 +45,5 @@ Route::get('/urna/{id}/candidatoedit', [CandidatoController::class, 'editcandida
 Route::post('/urna/candidatoupdate', [CandidatoController::class, 'updatecandidato']);
 Route::get('/urna/{id}/candidatodestroy', [CandidatoController::class, 'destroycandidato']);
 
-Route::post('/urna/voto', [VotoController::class, 'index']);
-
-Route::get('/urna/createform', [UrnaController::class, 'create']);
-Route::post('/urna/store', [UrnaController::class, 'store']);
+Route::get('/urna/voto', [VotoController::class, 'index']);
+Route::post('/urna/store', [VotoController::class, 'store']);
