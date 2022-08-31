@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PeriodoController;
 use App\Http\Controllers\CandidatoController;
 use App\Http\Controllers\EleitorController;
+use App\Http\Controllers\VotoController;
+
 
 
 /*
@@ -43,7 +45,7 @@ Route::get('/urna/{id}/candidatoedit', [CandidatoController::class, 'editcandida
 Route::post('/urna/candidatoupdate', [CandidatoController::class, 'updatecandidato']);
 Route::get('/urna/{id}/candidatodestroy', [CandidatoController::class, 'destroycandidato']);
 
-Route::get('/urna/formaluno', [UrnaController::class, 'formaluno']);
+Route::post('/urna/voto', [VotoController::class, 'index']);
 
 Route::get('/urna/createform', [UrnaController::class, 'create']);
 Route::post('/urna/store', [UrnaController::class, 'store']);

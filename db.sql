@@ -31,7 +31,7 @@ create table votos(
     datavt datetime not null,
     candidato int,
     zona varchar(120) not null,
-    seção varchar(120)  not null
+    secao varchar(120)  not null
 );
 
 create table votantes (
