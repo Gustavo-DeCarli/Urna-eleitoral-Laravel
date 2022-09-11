@@ -1,7 +1,7 @@
 @extends('base.index')
 
 @section('container')
-<form action='/urna/update' method='post'>
+<form action='/urna/candidatoupdate' method='post'>
     <input type='hidden' name='_token' value='{{ csrf_token() }}' />
     <input type="hidden" value="{{ $candidato->id }}" name="id" />
     </div>
@@ -19,7 +19,14 @@
     </div>
     <div class="mb-2">
         <label for="cargo" class="form-label">Cargo</label>
-        <input type="text" value="{{ $candidato->cargo  }}" name="cargo" class="form-control" id="cargo">
+        <select name="cargo" class="form-control" id="cargo">
+            <option value="{{ $candidato->cargo  }}">{{ $candidato->cargo  }}</option>
+            <option value='Presidente'>Presidente</option>
+            <option value='Governador'>Governador</option>
+            <option value='Senador'>Senador</option>
+            <option value='Deputado Federal'>Deputado Federal</option>
+            <option value='Deputado Estadual'>Deputado Estadual</option>
+        </select>
         
     <a class="btn btn-danger" href="/urna">Voltar</a>
     <button type="submit" class="btn btn-primary">Enviar</button>

@@ -47,3 +47,5 @@ Route::get('/urna/{id}/candidatodestroy', [CandidatoController::class, 'destroyc
 
 Route::get('/urna/voto', [VotoController::class, 'index']);
 Route::post('/urna/store', [VotoController::class, 'store']);
+Route::get('/urna/resultadozs', [VotoController::class, 'rzs']);
+Route::get('/urna/resultadoe', [VotoController::class, 're']);
