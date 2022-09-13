@@ -92,19 +92,4 @@
 </table>
 <a class="btn btn-success mb-2" href="/urna/voto">Novo Voto</a>
 
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th>aaa</th>
-            <th>aaaa</th>
-            <th>aaaa</th>
-            <th>aaaa</th>
-        </tr>
-    </thead>
-    <tbody>
-        
-    </tbody>
-</table>
-
-
 @endsection
