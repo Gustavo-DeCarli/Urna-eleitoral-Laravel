@@ -12,8 +12,8 @@ class VotoController extends Controller{
         $senadores = DB::table('candidatos')->where('cargo', '=', 'Senador')->get();
         $df = DB::table('candidatos')->where('cargo', '=', 'Deputado Federal')->get();
         $de = DB::table('candidatos')->where('cargo', '=', 'Deputado Estadual')->get();
-        $date = date('Y/m/d');
-        $periodo = DB::table('periodos')->where('data_inicio', '<=', $date)->where('data_fim', '>=', $date)->first();
+        $now = date('Y/m/d H:m:s');
+        $periodo = DB::table('periodos')->whereDate('data_inicio', '<=', $now)->whereDate('data_fim', '>=', $now)->first();
         if(!empty($periodo->id)){
         return view('urna.votar', ['presidentes' => $presidentes, 'senadores' => $senadores, 'governadores' => $governadores, 'df' => $df, 'de' => $de],);
         }else{
@@ -25,9 +25,8 @@ class VotoController extends Controller{
         $data = $request->all();
         unset($data['_token']);  
         date_default_timezone_set('America/Sao_Paulo');    
-        $date = date('Y/m/d');
-        $datetime = date('Y/m/d H:i:s');
-        $periodo = DB::table('periodos')->where('data_inicio', '<=', $date)->where('data_fim', '>=', $date)->first();
+        $now = date('Y/m/d H:i:s');
+        $periodo = DB::table('periodos')->whereDate('data_inicio', '<=', $now)->whereDate('data_fim', '>=', $now)->first();
         $tituloverf = DB::table('eleitores')->where('titulo', '=', $data['titulo'])->first();
         if(!isset($tituloverf)){
             echo "<script>alert('Titulo Inválido')</script>";
@@ -48,7 +47,7 @@ class VotoController extends Controller{
         foreach($votos as $voto){
         DB::table('votos')->insert([
             'id' => NULL,
-            'datavt' => $datetime,
+            'datavt' => $now,
             'candidato_id' => $voto,
             'zona' => $tituloverf->zona,
             'secao' => $tituloverf->secao

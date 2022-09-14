@@ -11,6 +11,7 @@ class PeriodoController extends Controller{
         $eleitores = DB::table('eleitores')->get();
         $candidatos = DB::table('candidatos')->get();
         $votos = DB::table('votos')->get();
+        $format= 'd/m/Y';
         $votantes = DB::table('votantes')->get();
         return view('urna.index', [
             'periodos' => $periodos,

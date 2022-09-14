@@ -28,11 +28,11 @@
     </div>
     <div class="mb-2">
         <label for="periodo" class="form-label">Periodo</label>
-        <select name="periodo" class="form-control" id="periodo">
         @foreach($dados as $dado)
+        <select name="periodo" class="form-control" id="periodo">
             <option value='{{$dado->id}}'>{{$dado->data_inicio}}--{{$dado->data_fim}}</option>
-            @endforeach    
         </select>
+        @endforeach    
     </div>
 
     <a class="btn btn-danger" href="/urna">Voltar</a>
