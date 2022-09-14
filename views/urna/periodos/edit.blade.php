@@ -10,11 +10,11 @@
     </div>
     <div class="mb-2">
         <label for="data_inicio" class="form-label">Data de inicio</label>
-        <input type="datetime-local" value="{{ $periodos->data_inicio  }}" name="data_inicio" class="form-control" id="data_inicio">
+        <input type="datetime-local" value="{{ $periodos->data_inicio  }}" name="dt_inicio" class="form-control" id="data_inicio">
     </div>
     <div class="mb-2">
         <label for="data_fim" class="form-label">Data de inicio</label>
-        <input type="datetime-local" value="{{ $periodos->data_fim  }}" name="data_fim" class="form-control" id="data_fim">
+        <input type="datetime-local" value="{{ $periodos->data_fim  }}" name="dt_fim" class="form-control" id="data_fim">
     </div>
     <a class="btn btn-danger" href="/escolas">Voltar</a>
     <button type="submit" class="btn btn-primary">Atualizar</button>

@@ -10,11 +10,11 @@
     </div>
     <div class="mb-2">
         <label for="nome_reduzido" class="form-label">Data de Inicio</label>
-        <input type="datetime-local" name="data_inicio" class="form-control" id="dt_inicio">
+        <input type="datetime-local" name="data_inicio" class="form-control" id="data_inicio">
     </div>
     <div class="mb-2">
         <label for="nome_reduzido" class="form-label">Data de Término</label>
-        <input type="datetime-local" name="data_fim" class="form-control" id="dt_fim">
+        <input type="datetime-local" name="data_fim" class="form-control" id="data_fim">
     </div>
     <a class="btn btn-danger" href="/urna">Voltar</a>
     <button type="submit" class="btn btn-primary">Enviar</button>
